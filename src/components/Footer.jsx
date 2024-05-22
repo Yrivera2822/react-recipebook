@@ -1,11 +1,11 @@
 function Footer ()  {  
     return( 
-         <div>
-         
-         
-         
-         
-         </div>
+
+        <div><div></div>
+
+            
+        </div>
+      
     
 
    
@@ -16,7 +16,8 @@ function Footer ()  {
  )
 }
 
-// function Navbar() {
+//
+//  function Navbar() {
 //     return (
 //       <nav>
 //         <input
