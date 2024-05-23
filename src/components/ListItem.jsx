@@ -1,8 +1,9 @@
 import { useState } from "react";
-import recipesData from "../data.json";
+import dishData from "../data.json";
+import { Link } from "react-router-dom";
 
 function ListItem() {
-  const [dishes, setDishes] = useState(recipesData);
+  const [dishes, setDishes] = useState(dishData);
   const deleteDish = (dishId) => {
     const filteredDishes = dishes.filter((dish) => dish.id !== dishId
         
@@ -13,14 +14,20 @@ function ListItem() {
   return (
     <div>
       <h1>YOUR FAVORITE DISHES ARE HERE!</h1>
-      <div className="all-dishes">
+      <div className="all-dishes"> 
         {dishes.map((dish) => (
           <>
+          {/* return() */}
             <div className="dish-container" key={dish.id}>
-              <img src={dish.image} className="dish-image" />
-              <span>{dish.name}</span> <br />
-              <span>Calories: {dish.calories}</span> <br />
-              <span>Serving size: {dish.servings}</span>
+              
+                <Link to={`/ItemDetails/${dish.id}`}  >
+                
+              <img src={dish.image} className="dish-image" /> </Link>
+              <br />
+              <span>{dish.name}</span>
+              {/* <span>Calories: {dish.calories}</span> <br />
+              <span>Serving size: {dish.servings}</span> */}
+              
               <button  onClick={()=> deleteDish(dish.id)} className="delete-btn" >Delete this dish</button>
             </div>
           </>
@@ -32,10 +39,3 @@ function ListItem() {
 
 export default ListItem;
 
-// {
-//     "id": "9e7f0d61-aa6b-418a-b56a-6418d19e6e1d",
-//     "name": "Pizza",
-//     "calories": 400,
-//     "image": "https://i.imgur.com/eTmWoAN.png",
-//     "servings": 1
-//   },
