@@ -1,3 +1,6 @@
+
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav>
@@ -11,7 +14,11 @@ function Navbar() {
         <button className="log-in" type="submit">
           Log in
         </button>
-        <img className="taste-image" src="./src/assets/taste.png" alt="" />
+        <NavLink to="/">
+          <button className="logo-btn">
+            <img className="taste-image" src="./src/assets/taste.png" alt="" />
+          </button>
+        </NavLink>
       </div>
     </nav>
   );

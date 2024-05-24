@@ -7,6 +7,16 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   margin: 0 auto;
+  flex-wrap: wrap;
+}
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa00;
+  padding: 20px;
 }
 .access {
   width: 60vh;
@@ -15,11 +25,19 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+.logo-btn{
+  margin: 0px;
+  padding: 0px;
+  border: 0px rgb(81, 171, 177);
+  background-color: rgb(81, 171, 177);
 }
 .taste-image {
   width: 13vh;
-  margin: 15px 0px 15px 0px;
+  min-width: 7rem;
 }
+
 .log-in {
   width: 20vh;
   height: 5vh;
@@ -27,8 +45,10 @@ nav {
   border-radius: 6px;
   background-color: rgb(225, 99, 57);
   font-size: 24px;
+  min-width: 7rem;
 }
 .search-bar {
+  min-width: 7rem;
   width: 60vh;
   height: 5vh;
   border-radius: 10px;
@@ -37,7 +57,7 @@ nav {
   font-size: 24px;
   border-color: rgba(3, 3, 3, 0.573);
 }
-.all-dishes{
+.all-dishes {
   max-width: fit-content;
   display: flex;
   flex-direction: row;
@@ -45,15 +65,47 @@ nav {
   align-items: center;
   flex-wrap: wrap;
 }
-.dish-container{
+.dish-container {
+  height: 15rem;
+  width: 10rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
 }
-.dish-image{
-  width: 15vh;
+.dish-image {
+  height: 7rem;
+  width: 10rem;
+  max-width: 10rem;
 }
-.info-container{
+.detail-image{
+  height: 7rem;
+  width: 10rem;
+  max-width: 10rem;
+}
+.info-container {
   width: 100px;
+}
+.delete-btn {
+  margin: 10px;
+  width: 19vh;
+  height: 5vh;
+  margin: 10px 10px 10px 10px;
+  border-radius: 6px;
+  background-color: rgb(225, 99, 57);
+  font-size: 19px;
+  min-width: 7rem;
+}
+.back-btn {
+  margin: 10px;
+  width: 19vh;
+  height: 5vh;
+  margin: 10px 10px 10px 10px;
+  border-radius: 6px;
+  background-color: rgb(225, 99, 57);
+  font-size: 19px;
+  min-width: 7rem;
+}
+span {
+  margin: 10px;
 }

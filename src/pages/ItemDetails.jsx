@@ -1,5 +1,6 @@
 import dishData from "../data.json";
 import { useParams, Link, Navigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function ItemDetails() {
   let { dishId } = useParams();
@@ -15,10 +16,15 @@ function ItemDetails() {
         {!dishInfo && <Navigate to="/dishes"/> }
         {dishInfo && (
           <>
-            <img src={dishInfo.image} alt="" />
-            <h2>{dishInfo.name}</h2>
-            <p>{dishInfo.calories}</p>
-            <p>{dishInfo.servings}</p>
+            <img className="detail-image" src={dishInfo.image} alt="" />
+            <h2>Name: {dishInfo.name}</h2>
+            <p>Calories per Serving: {dishInfo.calories}</p>
+            <p>Servings: {dishInfo.servings}</p>
+            <NavLink to="/">
+            <button className="back-btn">
+              Back
+            </button>
+            </NavLink>
           </>
         )}
       </div>
