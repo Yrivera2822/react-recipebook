@@ -109,3 +109,16 @@ nav {
 span {
   margin: 10px;
 }
+.add-dish-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:normal;
+  width: 400px;
+  height: 20vh;
+  margin: 0 auto;
+}
+.main-footer, .footer-container{
+  display: flex;
+  flex-direction: row;
+}

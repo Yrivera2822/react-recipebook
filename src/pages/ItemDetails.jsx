@@ -1,29 +1,29 @@
 import dishData from "../data.json";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import EditDish from "./EditDish";
 
 function ItemDetails() {
   let { dishId } = useParams();
-  console.log("This is the dish id using dishId ===>", dishId)
+  console.log("This is the dish id using dishId ===>", dishId);
   const dishInfo = dishData.find((dish) => dish.id === dishId);
-  console.log("This is the dish id ===>", dishInfo)
+  console.log("This is the dish id ===>", dishInfo);
 
   return (
     <div>
       <h1>Dish Details</h1>
-      
+
       <div>
-        {!dishInfo && <Navigate to="/dishes"/> }
+        {!dishInfo && <Navigate to="/dishes" />}
         {dishInfo && (
           <>
             <img className="detail-image" src={dishInfo.image} alt="" />
             <h2>Name: {dishInfo.name}</h2>
             <p>Calories per Serving: {dishInfo.calories}</p>
             <p>Servings: {dishInfo.servings}</p>
+            {/* <EditDish  dishes={dishes} setDishes={setDishes}/> */}
             <NavLink to="/">
-            <button className="back-btn">
-              Back
-            </button>
+              <button className="back-btn">Back</button>
             </NavLink>
           </>
         )}

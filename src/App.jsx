@@ -9,15 +9,18 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
+import { useState } from "react";
+import EditDish from "./pages/EditDish";
 // import sidebar from './components/Sidebar'
 
 function App() {
+  const[ dishes, setDishes ] = useState (dishData);        
   return (
     <div>
       <Navbar />
       <Sidebar />
       <Routes>
-        <Route path="/" element={ <Dashboard /> } />
+        <Route path="/" element={ <Dashboard dishes={dishes} setDishes={setDishes} /> } />
           {/* <Route
             path="/recipes/:recipeID"
             element={<ListItem recipes={recipesData} />}
@@ -26,7 +29,9 @@ function App() {
           <Route path="/ItemDetails/:dishId" element={<ItemDetails />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/notfound" element={<NotFound />}/>
+          <Route path="/editdish" element={<EditDish />}/>
         </Routes>
+        
         <Footer />
     </div>
   );

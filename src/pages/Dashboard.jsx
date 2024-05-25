@@ -1,10 +1,13 @@
 import React from 'react'
 import ListItem from '../components/ListItem'
+import AddDish from '../components/AddDish'
 
-function Dashboard() {
+function Dashboard({dishes, setDishes}) {
   return (
     <div>
-        <ListItem />
+        <ListItem dishes={dishes} setDishes={setDishes}/>
+        <AddDish dishes={dishes} setDishes={setDishes} />
+
     </div>
   )
 }
