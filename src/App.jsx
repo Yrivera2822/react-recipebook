@@ -11,14 +11,16 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import EditDish from "./pages/EditDish";
+
 // import sidebar from './components/Sidebar'
 
 function App() {
   const[ dishes, setDishes ] = useState (dishData);        
   return (
-    <div>
+   <div>
+    <Sidebar />
       <Navbar />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Routes>
         <Route path="/" element={ <Dashboard dishes={dishes} setDishes={setDishes} /> } />
           {/* <Route
@@ -32,7 +34,7 @@ function App() {
           <Route path="/editdish" element={<EditDish />}/>
         </Routes>
         
-        <Footer />
+        {/* <Footer /> */}
     </div>
   );
 }

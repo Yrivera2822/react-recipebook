@@ -12,7 +12,7 @@ function EditDish({ dishes, setDishes }) {
   );
 
   const handleSubmit = (e) => {
-    e.preventDefautl();
+    e.preventDefault();
 
     setDishes((prev) =>
       prev.map((dish) => {

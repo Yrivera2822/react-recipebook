@@ -1,6 +1,28 @@
 /* Nav Bar css starts here */
+html {
+  font-family: sans-serif;
+  background-color: rgba(225, 102, 57, 0.383);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.add-dish-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  width: 30%;
+}
+
 nav {
-  width: 100%;
+  width: 80%;
   background-color: rgb(81, 171, 177);
   display: flex;
   flex-direction: row;
@@ -8,15 +30,42 @@ nav {
   justify-content: space-evenly;
   margin: 0 auto;
   flex-wrap: wrap;
+  top: 0;
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 40px;
+}
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
 }
 .sidebar {
-  width: 200px;
-  height: 100vh;
-  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vh;
+  height: 40px;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
   top: 0;
-  left: 0;
-  background-color: #f8f9fa00;
+  margin: 0 auto;
+  background-color: rgba(81, 171, 177, 0.677);
   padding: 20px;
+  z-index: 1000; 
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  
+
+
 }
 .access {
   width: 60vh;
@@ -27,7 +76,7 @@ nav {
   align-items: center;
   flex-wrap: wrap;
 }
-.logo-btn{
+.logo-btn {
   margin: 0px;
   padding: 0px;
   border: 0px rgb(81, 171, 177);
@@ -57,8 +106,10 @@ nav {
   font-size: 24px;
   border-color: rgba(3, 3, 3, 0.573);
 }
+
 .all-dishes {
-  max-width: fit-content;
+  width: 80%;
+  /* max-width: fit-content; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -67,21 +118,23 @@ nav {
 }
 .dish-container {
   height: 15rem;
-  width: 10rem;
+  /* width: 10rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 10px;
+  align-items: center;
 }
 .dish-image {
   height: 7rem;
   width: 10rem;
-  max-width: 10rem;
+  /* max-width: 10rem; */
+  margin: 0 auto;
 }
-.detail-image{
+.detail-image {
   height: 7rem;
   width: 10rem;
-  max-width: 10rem;
+  /* max-width: 10rem; */
 }
 .info-container {
   width: 100px;
@@ -107,18 +160,77 @@ nav {
   min-width: 7rem;
 }
 span {
-  margin: 10px;
+  margin: 0 auto;
+  font-size: x-large;
+  font-family: sans-serif;
 }
-.add-dish-form{
+.add-dish-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items:normal;
-  width: 400px;
   height: 20vh;
   margin: 0 auto;
 }
-.main-footer, .footer-container{
+.details-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 5px;
+}
+.footer-container {
+  position: inherit;
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
+  padding: 20px;
 }
+
+footer {
+  background-color: rgb(81, 171, 177);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+p {
+  width: 350px;
+  margin: auto;
+  padding: 5px;
+  text-align: left;
+}
+.bottom-bar {
+  background-color: orange;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+  padding: 7px;
+  margin-top: 50px;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .ul{
+  text-align: center;
+}
+.list{
+  padding: 0;
+}
+.list {
+  width: auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+} */

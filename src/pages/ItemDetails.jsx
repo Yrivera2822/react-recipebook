@@ -10,10 +10,10 @@ function ItemDetails() {
   console.log("This is the dish id ===>", dishInfo);
 
   return (
-    <div>
+    <div className="parent-container">
       <h1>Dish Details</h1>
 
-      <div>
+      <div className="details-container">
         {!dishInfo && <Navigate to="/dishes" />}
         {dishInfo && (
           <>

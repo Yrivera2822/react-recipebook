@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function Sidebar() {
+  const [show, setShow] = useState(true);
   return (
     <div className="sidebar">
-      <h2>Sidebar</h2>
-      <div>
+      <div className="link-container">
         <NavLink to="/">
           <p>
             <a href="#home">Home</a>
@@ -24,3 +25,14 @@ function Sidebar() {
   );
 }
 export default Sidebar;
+
+// const [show, setShow] = useState(true);
+ 
+//   return (
+//     <div className="App">
+//       <button onClick={() => setShow(!show)}>
+//         { show ? "Hide" : "Show"}
+//       </button>
+//       {show && <Counter />}
+//     </div>
+//   );
