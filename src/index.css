@@ -79,6 +79,15 @@ nav {
   border: 0px rgb(81, 171, 177);
   background-color: rgb(81, 171, 177);
 }
+.edit-dish-button{
+  width: 25vh;
+  height: 5vh;
+  margin: 10px 10px 10px 10px;
+  border-radius: 6px;
+  background-color: rgb(225, 99, 57);
+  font-size: 24px;
+  min-width: 7rem;
+}
 .edit-button {
   width: 20vh;
   height: 5vh;

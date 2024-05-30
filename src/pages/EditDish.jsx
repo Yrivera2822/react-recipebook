@@ -84,7 +84,7 @@ function EditDish({ dishes, setDishes }) {
               }))
             }
           />
-          <button className="edit-button" type="submit">Edit your dish!</button>
+          <button className="edit-dish-button" type="submit">Edit your dish!</button>
         </form>
       </div>
     </div>
