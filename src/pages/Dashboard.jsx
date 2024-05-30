@@ -8,8 +8,10 @@ function Dashboard({ dishes, setDishes }) {
   return (
     <div>
       <ListItem dishes={dishes} setDishes={setDishes} />
-      <AddDish dishes={dishes} setDishes={setDishes} />
-      <Footer />
+      <div>
+      <AddDish dishes={dishes} setDishes={setDishes} /></div>
+      <div>
+      <Footer /></div>
     </div>
   );
 }

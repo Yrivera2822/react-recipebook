@@ -23,18 +23,12 @@ function App() {
       {/* <Sidebar /> */}
       <Routes>
         <Route path="/" element={ <Dashboard dishes={dishes} setDishes={setDishes} /> } />
-          {/* <Route
-            path="/recipes/:recipeID"
-            element={<ListItem recipes={recipesData} />}
-          /> */}
-
-          <Route path="/ItemDetails/:dishId" element={<ItemDetails />}/>
+          <Route path="/ItemDetails/:dishId"  element={<ItemDetails dishes={dishes} setDishes={setDishes} />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/notfound" element={<NotFound />}/>
           <Route path="/editdish" element={<EditDish />}/>
         </Routes>
         
-        {/* <Footer /> */}
     </div>
   );
 }

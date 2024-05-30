@@ -3,7 +3,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import EditDish from "./EditDish";
 
-function ItemDetails() {
+function ItemDetails({ dishes, setDishes }) {
   let { dishId } = useParams();
   console.log("This is the dish id using dishId ===>", dishId);
   const dishInfo = dishData.find((dish) => dish.id === dishId);
@@ -19,9 +19,13 @@ function ItemDetails() {
           <>
             <img className="detail-image" src={dishInfo.image} alt="" />
             <h2>Name: {dishInfo.name}</h2>
-            <p>Calories per Serving: {dishInfo.calories}</p>
-            <p>Servings: {dishInfo.servings}</p>
-            {/* <EditDish  dishes={dishes} setDishes={setDishes}/> */}
+            <div className="details-info">
+              <p>Calories per Serving: {dishInfo.calories}</p>
+              <p>Servings: {dishInfo.servings}</p>
+            </div>
+            <div className="edit-container">
+              <EditDish dishes={dishes} setDishes={setDishes} />
+            </div>
             <NavLink to="/">
               <button className="back-btn">Back</button>
             </NavLink>

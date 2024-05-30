@@ -12,7 +12,7 @@ function Sidebar() {
           </p>
         </NavLink>
         <NavLink to="/about">
-          {" "}
+          
           <p>
             <a href="#about">About</a>
           </p>

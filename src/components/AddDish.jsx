@@ -24,13 +24,14 @@ function AddDish({ dishes, setDishes }) {
   };
 
   return (
-    <div className="add-dish-container">
-      <form onSubmit={handleSubmit}>
+    <div >
+      <form className="add-dish-parent" onSubmit={handleSubmit}>
         <span>Add a Dish</span>
         <div className="add-dish-form">
           <label>
             Dish Name:<br></br>
             <input
+              className="add-dish-input"
               type="text"
               placeholder="Dish Name"
               onChange={(e) => setName(e.target.value)}
@@ -41,6 +42,7 @@ function AddDish({ dishes, setDishes }) {
           <label>
             Dish Image: <br></br>
             <input
+              className="add-dish-input"
               type="url"
               placeholder="Dish Image"
               onChange={(e) => setImage(e.target.value)}
@@ -51,6 +53,7 @@ function AddDish({ dishes, setDishes }) {
           <label>
             Calories:<br></br>
             <input
+              className="add-dish-input"
               type="text"
               placeholder="Calories"
               onChange={(e) => setCalories(e.target.value)}
@@ -61,6 +64,7 @@ function AddDish({ dishes, setDishes }) {
           <label>
             Servings:<br></br>
             <input
+              className="add-dish-input"
               type="text"
               placeholder="Servings"
               onChange={(e) => setServings(e.target.value)}
@@ -69,7 +73,7 @@ function AddDish({ dishes, setDishes }) {
           </label>
         </div>
 
-        <button type="submit">Add Dish</button>
+        <button className="edit-button" type="submit">Add Dish</button>
       </form>
     </div>
   );

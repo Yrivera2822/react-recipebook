@@ -23,9 +23,6 @@ function ListItem({ dishes, setDishes }) {
               </Link>
               <br />
               <span>{dish.name}</span>
-              {/* <span>Calories: {dish.calories}</span> <br />
-              <span>Serving size: {dish.servings}</span> */}
-
               <button
                 onClick={() => deleteDish(dish.id)}
                 className="delete-btn"
@@ -35,11 +32,6 @@ function ListItem({ dishes, setDishes }) {
             </div>
           </>
         ))}
-      </div>
-     
-      <div> </div>{" "}
-      <div>
-        
       </div>
     </div>
   );

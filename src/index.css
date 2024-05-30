@@ -2,6 +2,8 @@
 html {
   font-family: sans-serif;
   background-color: rgba(225, 102, 57, 0.383);
+  height: 100%;
+  margin: 0;
 }
 
 form {
@@ -13,6 +15,8 @@ form {
   margin-top: 5px;
   margin-bottom: 15px;
 }
+
+/* aca esta el dish-contair para agragar platos */
 .add-dish-container {
   display: flex;
   flex-direction: column;
@@ -36,18 +40,13 @@ nav {
   padding-bottom: 20px;
   border-radius: 40px;
 }
-.parent-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  justify-content: center;
-}
+
 .sidebar {
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 100vh;
+  width: 156vh;
   height: 40px;
   position: -webkit-sticky; /* For Safari */
   position: sticky;
@@ -55,17 +54,15 @@ nav {
   margin: 0 auto;
   background-color: rgba(81, 171, 177, 0.677);
   padding: 20px;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .link-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  
-
-
+  /* flex: 1; This makes sure the link-container takes up the full height of the sidebar */
 }
 .access {
   width: 60vh;
@@ -81,6 +78,15 @@ nav {
   padding: 0px;
   border: 0px rgb(81, 171, 177);
   background-color: rgb(81, 171, 177);
+}
+.edit-button {
+  width: 20vh;
+  height: 5vh;
+  margin: 10px 10px 10px 10px;
+  border-radius: 6px;
+  background-color: rgb(225, 99, 57);
+  font-size: 24px;
+  min-width: 7rem;
 }
 .taste-image {
   width: 13vh;
@@ -164,31 +170,94 @@ span {
   font-size: x-large;
   font-family: sans-serif;
 }
+.add-dish-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.add-dish-form {
+  display: flex;
+  flex-direction: column;
+
+}
+.not-found{
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+}
+/* .add-dish-parent {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  border-radius: 1px solid red;
+}
+
 .add-dish-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 20vh;
+  /* height: 20vh; 
+   margin: 0 auto;
+  border-radius: 1px solid blue;
+} */
+
+.add-dish-input {
+
+  min-width: 7rem;
+  width: 60vh;
+  border-radius: 10px;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.362);
+  font-size: 24px;
+  border-color: rgba(3, 3, 3, 0.573);
 }
-.details-container {
+ .details-container {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
-  width: 5px;
+  justify-content: center;
+  width: 100%;
+}
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 .footer-container {
-  position: inherit;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   padding: 20px;
-}
-
-footer {
   background-color: rgb(81, 171, 177);
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
   align-items: center;
 }
 
@@ -213,12 +282,9 @@ p {
   padding: 7px;
   margin-top: 50px;
 }
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
+.about-text{
+  font-size:xx-large;
+  width: 50%;
 }
 
 /* .ul{
@@ -234,3 +300,6 @@ p {
   padding: 7px;
   position: relative;
 } */
+/* className="add-dish-parent"
+className="add-dish-form"
+className="add-dish-input" */

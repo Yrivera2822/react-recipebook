@@ -27,16 +27,16 @@ function EditDish({ dishes, setDishes }) {
 
   return (
     <div>
-      <h1>Add Dish</h1>
-      <div className="AddDish">
-        <h4>Add a Dish</h4>
-
+      <h1 >Edit Item:</h1>
+      <div className="EditDish">
         <form onSubmit={handleSubmit}>
           {" "}
           <label>Image </label>
           <input
+          className="add-dish-input"
             type="url"
             name="image"
+            value={dishToEdit.image}
             onChange={(e) =>
               setDishToEdit((prev) => ({
                 ...prev,
@@ -46,6 +46,7 @@ function EditDish({ dishes, setDishes }) {
           />
           <label>Name: </label>
           <input
+          className="add-dish-input"
             type="text"
             name="name"
             value={dishToEdit.name}
@@ -58,6 +59,7 @@ function EditDish({ dishes, setDishes }) {
           />
           <label>Calories </label>
           <input
+          className="add-dish-input"
             type="text"
             name="calories"
             value={dishToEdit.calories}
@@ -70,6 +72,7 @@ function EditDish({ dishes, setDishes }) {
           />
           <label>Servings: </label>
           <input
+          className="add-dish-input"
             type="number"
             name="servings"
             step={2}
@@ -81,7 +84,7 @@ function EditDish({ dishes, setDishes }) {
               }))
             }
           />
-          <button type="submit">Edit your dish!</button>
+          <button className="edit-button" type="submit">Edit your dish!</button>
         </form>
       </div>
     </div>
