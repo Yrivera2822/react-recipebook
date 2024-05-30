@@ -75,7 +75,7 @@ function EditDish({ dishes, setDishes }) {
           className="add-dish-input"
             type="number"
             name="servings"
-            step={2}
+            // step={0}
             value={dishToEdit.servings}
             onChange={(e) =>
               setDishToEdit((prev) => ({
